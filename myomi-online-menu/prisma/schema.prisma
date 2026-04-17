@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Dish {
+  id          String       @id
+  name        String
+  description String?
+  price       Int
+  imageUrl    String?
+  category    EnumCategory
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime
+}
+
+enum EnumCategory {
+  APPETIZER
+  SALAD
+  TEMPURA
+  TERIYAKI_YAKISOBA
+  UDON
+  RAMEN
+  POKE_DONBURI
+  ROLL
+  OSHI_SUSHI
+  TONKATSU
+  NIGIRI
+  ABURI
+  SASHIMI
+  SPECIAL_ROLLS
+  SPECIAL_DINNER
+  SPECIAL_LUNCH
+  PARTY_TRAY
+  SOFT_DRINKS
+}
