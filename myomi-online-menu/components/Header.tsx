@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { JSX } from "react";
 
-function Header() {
+function Header(): JSX.Element {
   return (
     <nav className="bg-[#8fa3b3] h-20 w-full flex items-center px-8 relative">
       <Link href="/" className="flex justify-center w-60 h-7 cursor-default">
