@@ -8,33 +8,39 @@ datasource db {
 }
 
 model Dish {
-  id          String       @id
+  id          String   @id @default(uuid())
   name        String
   description String?
   price       Int
   imageUrl    String?
-  category    EnumCategory
-  createdAt   DateTime     @default(now())
+  category    Category @relation(fields: [categoryId], references: [id])
+  createdAt   DateTime @default(now())
   updatedAt   DateTime
+  categoryId  String
 }
 
-enum EnumCategory {
-  APPETIZER
-  SALAD
-  TEMPURA
-  TERIYAKI_YAKISOBA
-  UDON
-  RAMEN
-  POKE_DONBURI
-  ROLL
-  OSHI_SUSHI
-  TONKATSU
-  NIGIRI
-  ABURI
-  SASHIMI
-  SPECIAL_ROLLS
-  SPECIAL_DINNER
-  SPECIAL_LUNCH
-  PARTY_TRAY
-  SOFT_DRINKS
+model Category {
+  id     String @id // "special-rolls"
+  name   String // "Special Rolls"
+  imgUrl String
+  dishes Dish[]
 }
+
+//   APPETIZER
+//   SALAD
+//   TEMPURA
+//   TERIYAKI_YAKISOBA
+//   UDON
+//   RAMEN
+//   POKE_DONBURI
+//   ROLL
+//   OSHI_SUSHI
+//   TONKATSU
+//   NIGIRI
+//   ABURI
+//   SASHIMI
+//   SPECIAL_ROLLS
+//   SPECIAL_DINNER
+//   SPECIAL_LUNCH
+//   PARTY_TRAY
+//   SOFT_DRINKS
