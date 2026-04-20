@@ -8,13 +8,13 @@ async function CategoryList(): Promise<JSX.Element> {
   console.log(categories);
 
   return (
-    <div className="w-full grid grid-cols-4 px-15 gap-20">
+    <ul className="w-full grid grid-cols-4 px-15 gap-20">
       {categories.map((category) => (
-        <div className="text-center" key={category.id}>
+        <li className="text-center" key={category.id}>
           {category.name}
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 

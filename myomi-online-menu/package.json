@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seeds": "prisma db seed"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.7.0",
@@ -27,6 +28,7 @@
     "eslint-config-next": "16.2.4",
     "prisma": "^7.7.0",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

@@ -3,57 +3,59 @@ import { prisma } from "@/lib/prisma";
 const addCategories = async () => {
   await prisma.category.createMany({
     data: [
-      {
-        id: "special-rolls",
-        name: "Special Rolls",
-        imgUrl: "/icons/special-rolls.jpg",
-      },
-      { id: "appetizer", name: "Appetizer", imgUrl: "/icons/appetizer.jpg" },
-      { id: "salad", name: "Salad", imgUrl: "/icons/salad.jpg" },
-      { id: "tempura", name: "Tempura", imgUrl: "/icons/tempura.jpg" },
+      { id: "appetizer", name: "Appetizer", imgUrl: "/icons/appetizer.png" },
+      { id: "salad", name: "Salad", imgUrl: "/icons/salad.png" },
+      { id: "tempura", name: "Tempura", imgUrl: "/icons/tempura.png" },
       {
         id: "teriyaki-yakisooba",
         name: "Teriyaki Yakisooba",
-        imgUrl: "/icons/teriyaki-yakisooba.jpg",
+        imgUrl: "/icons/teriyaki-yakisooba.png",
       },
-      { id: "udon", name: "Udon", imgUrl: "/icons/udon.jpg" },
-      { id: "ramen", name: "Ramen", imgUrl: "/icons/ramen.jpg" },
+      { id: "udon", name: "Udon", imgUrl: "/icons/udon.png" },
+      { id: "ramen", name: "Ramen", imgUrl: "/icons/ramen.png" },
       {
         id: "poke-donburi",
         name: "Poke Donburi",
-        imgUrl: "/icons/poke-donburi.jpg",
+        imgUrl: "/icons/poke-donburi.png",
       },
-      { id: "roll", name: "Roll", imgUrl: "/icons/roll.jpg" },
+      { id: "roll", name: "Roll", imgUrl: "/icons/roll.png" },
       {
         id: "oshi-sushi",
         name: "Oshi Sushi",
-        imgUrl: "/icons/oshi-sushi.jpg",
+        imgUrl: "/icons/oshi-sushi.png",
       },
-      { id: "tonkatsu", name: "Tonkatsu", imgUrl: "/icons/tonkatsu.jpg" },
-      { id: "nigiri", name: "Nigiri", imgUrl: "/icons/nigiri.jpg" },
-      { id: "aburi", name: "Aburi", imgUrl: "/icons/aburi.jpg" },
-      { id: "sashimi", name: "Sashimi", imgUrl: "/icons/sashimi.jpg" },
+      { id: "tonkatsu", name: "Tonkatsu", imgUrl: "/icons/tonkatsu.png" },
+      { id: "nigiri", name: "Nigiri", imgUrl: "/icons/nigiri.png" },
+      { id: "aburi", name: "Aburi", imgUrl: "/icons/nigiri.png" },
+      { id: "sashimi", name: "Sashimi", imgUrl: "/icons/sashimi.png" },
+      {
+        id: "special-rolls",
+        name: "Special Rolls",
+        imgUrl: "/icons/rolls.png",
+      },
       {
         id: "special-dinner",
         name: "Special Dinner",
-        imgUrl: "/icons/special-dinner.jpg",
+        imgUrl: "/icons/special-dinner.png",
       },
       {
         id: "special-lunch",
         name: "Special Lunch",
-        imgUrl: "/icons/special-lunch.jpg",
+        imgUrl: "/icons/special-lunch.png",
       },
       {
         id: "party-tray",
         name: "Party Tray",
-        imgUrl: "/icons/party-tray.jpg",
+        imgUrl: "/icons/party-tray.png",
       },
       {
         id: "soft-drinks",
         name: "Soft Drinks",
-        imgUrl: "/icons/soft-drinks.jpg",
+        imgUrl: "/icons/soft-drinks.png",
       },
     ],
     skipDuplicates: true,
   });
 };
+
+addCategories();
