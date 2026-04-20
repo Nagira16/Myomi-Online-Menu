@@ -9,7 +9,7 @@ const addCategories = async () => {
       {
         id: "teriyaki-yakisooba",
         name: "Teriyaki Yakisooba",
-        imgUrl: "/icons/teriyaki-yakisooba.png",
+        imgUrl: "/icons/teriyaki-yakisoba.png",
       },
       { id: "udon", name: "Udon", imgUrl: "/icons/udon.png" },
       { id: "ramen", name: "Ramen", imgUrl: "/icons/ramen.png" },
@@ -18,20 +18,20 @@ const addCategories = async () => {
         name: "Poke Donburi",
         imgUrl: "/icons/poke-donburi.png",
       },
+      { id: "tonkatsu", name: "Tonkatsu", imgUrl: "/icons/tonkatsu.png" },
       { id: "roll", name: "Roll", imgUrl: "/icons/roll.png" },
       {
         id: "oshi-sushi",
         name: "Oshi Sushi",
-        imgUrl: "/icons/oshi-sushi.png",
+        imgUrl: "/icons/nigiri.png",
       },
-      { id: "tonkatsu", name: "Tonkatsu", imgUrl: "/icons/tonkatsu.png" },
       { id: "nigiri", name: "Nigiri", imgUrl: "/icons/nigiri.png" },
       { id: "aburi", name: "Aburi", imgUrl: "/icons/nigiri.png" },
       { id: "sashimi", name: "Sashimi", imgUrl: "/icons/sashimi.png" },
       {
         id: "special-rolls",
         name: "Special Rolls",
-        imgUrl: "/icons/rolls.png",
+        imgUrl: "/icons/roll.png",
       },
       {
         id: "special-dinner",

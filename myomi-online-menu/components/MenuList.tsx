@@ -1,7 +1,7 @@
-import { Dish } from "@/generated/prisma/browser";
+import { MenuProps } from "@/types";
 import { JSX } from "react";
 
-function MenuList(menuList: Dish[]): JSX.Element {
+function MenuList({ menuList }: MenuProps): JSX.Element {
   return (
     <div>
       {menuList.map((dish) => (
