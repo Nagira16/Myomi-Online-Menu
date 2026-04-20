@@ -12,8 +12,10 @@ export default async function Home({
   const params = await searchParams;
 
   return (
-    <main className="bg-[url('/sushi_main_bg.jpg')] bg-no-repeat bg-cover bg-center min-h-screen w-full flex items-center justify-center">
-      <SearchBar />
+    <main className="bg-[url('/sushi_main_bg.jpg')] bg-no-repeat bg-cover bg-center min-h-screen w-full flex items-center justify-center flex-col space-y-5">
+      <section className="w-full flex justify-end pr-30">
+        <SearchBar />
+      </section>
       <CategoryList />
       <MenuList menuList={[]} />
     </main>

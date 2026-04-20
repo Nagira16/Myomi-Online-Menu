@@ -26,13 +26,13 @@ function SearchBar(): JSX.Element {
   }, [value]);
 
   return (
-    <div>
+    <div className="w-60">
       <input
         type="text"
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder="Search for dishes..."
-        className="w-full p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full p-2 rounded-md border bg-white text-black border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>
   );

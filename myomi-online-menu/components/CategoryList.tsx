@@ -13,7 +13,7 @@ async function CategoryList(): Promise<JSX.Element> {
       {categories.length === 0 ? (
         <p className="text-center text-white text-2xl">No categories found.</p>
       ) : (
-        <ul className="w-full grid grid-cols-5 px-15 gap-5 group">
+        <ul className="w-full grid grid-cols-5 px-15 gap-10 group">
           {categories.map((category) => (
             <li
               key={category.id}
