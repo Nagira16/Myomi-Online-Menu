@@ -1,5 +1,6 @@
 import CategoryList from "@/components/CategoryList";
 import MenuList from "@/components/MenuList";
+import SearchBar from "@/components/SearchBar";
 import { SearchParam } from "@/types";
 import { JSX } from "react";
 
@@ -12,6 +13,7 @@ export default async function Home({
 
   return (
     <main className="bg-[url('/sushi_main_bg.jpg')] bg-no-repeat bg-cover bg-center min-h-screen w-full flex items-center justify-center">
+      <SearchBar />
       <CategoryList />
       <MenuList menuList={[]} />
     </main>
