@@ -22,7 +22,10 @@ async function CategoryList(): Promise<JSX.Element> {
                  hover:scale-105 
                  group-hover:grayscale hover:grayscale-0!"
             >
-              <Link href={`/?category=${category.id}`}>
+              <Link
+                className="text-center flex justify-center flex-col items-center"
+                href={`/?category=${category.id}`}
+              >
                 <Image
                   src={category.imgUrl}
                   alt={category.name}
