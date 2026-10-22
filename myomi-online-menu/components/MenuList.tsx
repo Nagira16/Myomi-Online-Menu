@@ -1,11 +1,15 @@
-import { MenuProps } from "@/types";
+import { MenuWithCategory } from "@/types";
 import { JSX } from "react";
 
-function MenuList({ menuList }: MenuProps): JSX.Element {
+function MenuList({ menuList }: { menuList: MenuWithCategory[] }): JSX.Element {
   return (
     <div>
       {menuList.map((dish) => (
-        <div key={dish.id}></div>
+        <div key={dish.id}>
+          <h3>{dish.name}</h3>
+          <p>{dish.description}</p>
+          <p>${dish.price.toFixed(2)}</p>
+        </div>
       ))}
     </div>
   );
