@@ -1,3 +1,5 @@
+"use server";
+
 import { Category } from "@/generated/prisma/browser";
 import { prisma } from "@/lib/prisma";
 

@@ -13,7 +13,7 @@ async function CategoryList(): Promise<JSX.Element> {
       {categories.length === 0 ? (
         <p className="text-center text-white text-2xl">No categories found.</p>
       ) : (
-        <ul className="w-full grid grid-cols-5 px-15 gap-5 group">
+        <ul className="w-full grid grid-cols-5 px-15 gap-10 group">
           {categories.map((category) => (
             <li
               key={category.id}
@@ -22,7 +22,10 @@ async function CategoryList(): Promise<JSX.Element> {
                  hover:scale-105 
                  group-hover:grayscale hover:grayscale-0!"
             >
-              <Link href={`/?category=${category.id}`}>
+              <Link
+                className="text-center flex justify-center flex-col items-center"
+                href={`/?category=${category.id}`}
+              >
                 <Image
                   src={category.imgUrl}
                   alt={category.name}

@@ -1,4 +1,4 @@
-import { Category, Dish } from "@/generated/prisma/browser";
+import { Category, Dish, Prisma } from "@/generated/prisma/browser";
 
 export type SearchParam = {
   category?: Category["id"];
@@ -8,3 +8,7 @@ export type SearchParam = {
 export type MenuProps = {
   menuList: Dish[];
 };
+
+export type MenuWithCategory = Prisma.DishGetPayload<{
+  include: { category: true };
+}>;
